@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: solid 1px grey;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        img{
+            width: 50%;
+        }
+        section{
+            border: solid 1px grey;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-top: 60px;
+            padding: 10px;
+        }
+        input{
+            height: 35px;
+            width: 43px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: x-large;
+            margin: 5px;
+        }
+        footer{
+            border: solid 1px grey;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 15px;
+        }
+        p{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: larger;
+            color: rgb(33, 218, 33);
+            text-decoration: underline;
+        }
+        .cl{
+            animation-timing-function: ease-out;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-name: disagree;
+        }
+        @keyframes disagree{
+            30%{
+                margin-right: 4px;
+            }
+            60%{
+                margin-right: -4px;
+            }
+            90%{
+                margin-right: 2px;
+            }
+            100%{
+                margin-right: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="PEP.jpg" alt="logo">
+    </div>
+
+    <p id="status" style="display: none;">Correct!</p>
+
+    <section>
+        <input id="Pp" type="text" value="?" readonly value="?" readonly>
+        <input id="Ep" type="text" value="?" readonly value="?">
+        <input id="P2p" type="text" value="?" readonly value="?">
+        <input type="text">
+    </section>
+
+    <footer>
+        <input onclick="compareE()" id="E" type="text" value="E" readonly value="E">
+        <input onclick="compareP()" id="P" type="text" value="P" readonly value="P">
+        <input onclick="compareP2()" id="P2" type="text" value="P" readonly value="P">
+        <input id="C" type="text" readonly draggable="true" value="C">
+    </footer> <br>
+
+    <button onclick="compareFinal()">Done</button>
+     
+    <script>
+        const E = document.getElementById('E');
+        const P = document.getElementById('P');
+        const P2 = document.getElementById('P2');
+        const C = document.getElementById('C');
+        const Pp = document.getElementById('Pp'); 
+        const Ep = document.getElementById('Ep');
+        const P2p = document.getElementById('P2p');
+
+
+        function compareP(){
+           Pp.value = P.value;
+        };
+
+        function compareE(){
+           Ep.value = E.value;
+        };
+
+        function compareP2(){
+           P2p.value = P2.value;
+        };
+
+        function compareFinal(){
+            let status = document.getElementById('status');
+
+            if(Pp.value + Ep.value + P2p.value === 'PEP'){
+                status.innerHTML = '';
+                status.innerHTML = 'Correct';
+                status.style.display = 'block';
+                status.style.color = 'limegreen';
+           }
+
+           if(Pp.value + Ep.value + P2p.value !== 'PEP'){
+            
+                status.innerHTML = '';
+                status.style.display = 'block';
+                status.innerHTML = 'Incorrect';
+                status.style.color = 'red';
+                status.classList.add('cl');
+             return;
+           }
+        };
+    </script>
+</body>
+</html>
