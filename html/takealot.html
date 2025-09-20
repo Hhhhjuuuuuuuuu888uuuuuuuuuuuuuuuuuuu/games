@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: solid 1px grey;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        button{
+            border-radius: 15px;
+            border: 1px solid rgb(232, 235, 91);
+            background-color: rgb(192, 132, 248);
+            width: 70px;
+            height: 30px;
+            color: white;
+            font-size: larger;
+        }
+        img{
+            width: 50%;
+        }
+        section{
+            border: solid 1px grey;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            height: 35px;
+            margin-top: 30px;
+            padding: 10px;
+            border-radius: 15px;
+            flex-wrap: wrap;
+        }
+        input{
+            height: 35px;
+            width: 43px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: x-large;
+            margin: 5px;
+            border-radius: 15px;
+            border: 2px solid rgb(240, 145, 211);
+        }
+        footer{
+            border: solid 1px grey;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 15px;
+            flex-wrap: wrap;
+        }
+        p{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            font-size: larger;
+            color: rgb(33, 218, 33);
+            text-decoration: underline;
+        }
+        .cl{
+            animation-timing-function: ease-out;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-name: disagree;
+        }
+        @keyframes disagree{
+            30%{
+                margin-right: 4px;
+            }
+            60%{
+                margin-right: -4px;
+            }
+            90%{
+                margin-right: 2px;
+            }
+            100%{
+                margin-right: 0px;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: rgb(187, 187, 223);">
+    <div>
+        <img src="PEP.jpg" alt="logo" style="border-radius: 50%; margin: 5px; height: 140px; width: 140px;">
+    </div>
+    
+    <portalil style="display: flex; gap: 50px; justify-content: center; margin-top: -25px;">
+        <p style="text-decoration: none; font-size: 3rem; color: rgb(156, 151, 151); font-weight: bolder;"><</p>
+        <p id="status" style="display: none; margin-top: 4rem; font-size: x-large;">Correct!</p>
+        <p style="text-decoration: none; font-size: 3rem; color: rgb(54, 53, 53); font-weight: bolder;">></p>
+    </portalil>
+    <br>
+    <button style="margin-top: -40rem;" onclick="compareFinal()">Done</button>
+    <button style="margin-top: -40rem;" onclick="reset()">Erase</button>
+    <section id="main">
+        <!-- mainares -->
+    </section>
+
+    
+
+    <footer>
+        <input id="A" type="text" readonly value="A">
+        <input id="B" type="text" readonly value="B">
+        <input id="C" type="text" readonly value="C">
+        <input id="D" type="text" readonly value="D">
+        <input id="E" type="text" readonly value="E">
+        <input id="F" type="text" readonly value="F">
+        <input id="G" type="text" readonly value="G">
+        <input id="H" type="text" readonly value="H">
+        <input id="I" type="text" readonly value="I">
+        <input id="J" type="text" readonly value="J">
+        <input id="K" type="text" readonly value="K">
+        <input id="L" type="text" readonly value="L">
+        <input id="M" type="text" readonly value="M">
+        <input id="N" type="text" readonly value="N">
+        <input id="O" type="text" readonly value="O">
+        <input id="P" type="text" readonly value="P">
+        <input id="Q" type="text" readonly value="Q">
+        <input id="R" type="text" readonly value="R">
+        <input id="S" type="text" readonly value="S">
+        <input id="T" type="text" readonly value="T">
+        <input id="U" type="text" readonly value="U">
+        <input id="V" type="text" readonly value="V">
+        <input id="W" type="text" readonly value="W">
+        <input id="X" type="text" readonly value="X">
+        <input id="Y" type="text" readonly value="Y">
+        <input id="Z" type="text" readonly value="Z">
+        <input id="dash" type="text" readonly value="-">
+
+    </footer> <br>
+     
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4884699486653763"
+     crossorigin="anonymous"></script>
+
+    <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    
+    <script>
+        const main = document.getElementById('main');
+        const status = document.getElementById('status');
+
+        // Create constants for buttons A to Z
+        const A = document.getElementById('A');
+        const B = document.getElementById('B');
+        const C = document.getElementById('C');
+        const D = document.getElementById('D');
+        const E = document.getElementById('E');
+        const F = document.getElementById('F');
+        const G = document.getElementById('G');
+        const H = document.getElementById('H');
+        const I = document.getElementById('I');
+        const J = document.getElementById('J');
+        const K = document.getElementById('K');
+        const L = document.getElementById('L');
+        const M = document.getElementById('M');
+        const N = document.getElementById('N');
+        const O = document.getElementById('O');
+        const P = document.getElementById('P');
+        const Q = document.getElementById('Q');
+        const R = document.getElementById('R');
+        const S = document.getElementById('S');
+        const T = document.getElementById('T');
+        const U = document.getElementById('U');
+        const V = document.getElementById('V');
+        const W = document.getElementById('W');
+        const X = document.getElementById('X');
+        const Y = document.getElementById('Y');
+        const Z = document.getElementById('Z');
+        const Space = document.getElementById('dash');
+
+        // Add event listeners to each button
+        Space.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = '-';
+            main.appendChild(input);
+        });
+        A.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'A';
+            main.appendChild(input);
+        });
+        B.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'B';
+            main.appendChild(input);
+        });
+        C.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'C';
+            main.appendChild(input);
+        });
+        D.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'D';
+            main.appendChild(input);
+        });
+        E.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'E';
+            main.appendChild(input);
+        });
+        F.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'F';
+            main.appendChild(input);
+        });
+        G.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'G';
+            main.appendChild(input);
+        });
+        H.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'H';
+            main.appendChild(input);
+        });
+        I.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'I';
+            main.appendChild(input);
+        });
+        J.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'J';
+            main.appendChild(input);
+        });
+        K.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'K';
+            main.appendChild(input);
+        });
+        L.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'L';
+            main.appendChild(input);
+        });
+        M.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'M';
+            main.appendChild(input);
+        });
+        N.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'N';
+            main.appendChild(input);
+        });
+        O.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'O';
+            main.appendChild(input);
+        });
+        P.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'P';
+            main.appendChild(input);
+        });
+        Q.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'Q';
+            main.appendChild(input);
+        });
+        R.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'R';
+            main.appendChild(input);
+        });
+        S.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'S';
+            main.appendChild(input);
+        });
+        T.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'T';
+            main.appendChild(input);
+        });
+        U.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'U';
+            main.appendChild(input);
+        });
+        V.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'V';
+            main.appendChild(input);
+        });
+        W.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'W';
+            main.appendChild(input);
+        });
+        X.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'X';
+            main.appendChild(input);
+        });
+        Y.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'Y';
+            main.appendChild(input);
+        });
+        Z.addEventListener('click', () => {
+            let input = document.createElement('input');
+            input.value = 'Z';
+            main.appendChild(input);
+        });
+
+
+
+        function compareFinal(){
+            let status = document.getElementById('status');
+
+            const inputs = main.querySelectorAll('input');
+
+            let word = '';
+            inputs.forEach(input => {
+                word += input.value;
+                console.log(word); // You can compare or process each value here
+                if(word === 'TAKEALOT'){
+                status.innerHTML = '';
+                status.innerHTML = 'Correct';
+                status.style.display = 'block';
+                status.style.color = 'limegreen';
+                status.classList.add('cl');
+
+                setInterval(() => {
+                    window.location.assign('woolworths.html');
+                }, 2000);
+        
+               }else{
+                status.innerHTML = '';
+                status.style.display = 'block';
+                status.innerHTML = 'Incorrect';
+                status.style.color = 'red';
+                status.classList.add('cl');
+               }
+            });
+        };
+        
+        function reset(){
+            let status = document.getElementById('status');
+
+            main.innerHTML = '';
+            status.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
