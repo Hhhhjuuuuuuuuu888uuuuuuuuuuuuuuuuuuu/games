@@ -331,6 +331,9 @@
                 status.style.color = 'limegreen';
                 status.classList.add('cl');
 
+                const utterance = new SpeechSynthesisUtterance(status.innerHTML);
+                speechSynthesis.speak(utterance);
+
                 setInterval(() => {
                     window.location.assign('kfc.html');
                 }, 2000);
