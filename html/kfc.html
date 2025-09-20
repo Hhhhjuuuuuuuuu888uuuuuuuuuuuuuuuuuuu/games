@@ -325,13 +325,13 @@
                 word += input.value;
                 console.log(word); // You can compare or process each value here
                 if(word === 'KFC'){
-                status.innerHTML = '';
+                
                 status.innerHTML = 'Correct';
                 status.style.display = 'block';
                 status.style.color = 'limegreen';
                 status.classList.add('cl');
 
-                const utterance = new SpeechSynthesisUtterance(status.innerHTML);
+                let utterance = new SpeechSynthesisUtterance(status.innerHTML);
                 speechSynthesis.speak(utterance);
 
                 setInterval(() => {
@@ -339,13 +339,12 @@
                 }, 2000);
         
                }else{
-                status.innerHTML = '';
+                
                 status.style.display = 'block';
                 status.innerHTML = 'Incorrect';
                 status.style.color = 'red';
                 status.classList.add('cl');
-                const utterance = new SpeechSynthesisUtterance(status.innerHTML);
-                speechSynthesis.speak(utterance);
+                
                }
             });
         };
