@@ -11,6 +11,15 @@
             justify-content: center;
             display: flex;
         }
+        button{
+            border-radius: 15px;
+            border: 1px solid rgb(232, 235, 91);
+            background-color: rgb(192, 132, 248);
+            width: 70px;
+            height: 30px;
+            color: white;
+            font-size: larger;
+        }
         img{
             width: 50%;
         }
@@ -19,8 +28,10 @@
             align-items: center;
             justify-content: center;
             display: flex;
-            margin-top: 60px;
+            height: 35px;
+            margin-top: 30px;
             padding: 10px;
+            border-radius: 15px;
         }
         input{
             height: 35px;
@@ -30,6 +41,8 @@
             font-weight: bolder;
             font-size: x-large;
             margin: 5px;
+            border-radius: 15px;
+            border: 2px solid rgb(240, 145, 211);
         }
         footer{
             border: solid 1px grey;
@@ -71,19 +84,20 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color: rgb(187, 187, 223);">
     <div>
-        <img src="PEP.jpg" alt="logo">
+        <img src="PEP.jpg" alt="logo" style="border-radius: 50%; margin: 5px; height: 140px; width: 140px;">
     </div>
     
-    <portalil style="display: flex; gap: 50px; justify-content: center;">
-        <p style="text-decoration: none; font-size: x-large; color: rgb(54, 53, 53); font-weight: bolder;"><</p>
-        <p id="status" style="display: none;">Correct!</p>
-        <p style="text-decoration: none; font-size: x-large; color: rgb(54, 53, 53); font-weight: bolder;">></p>
+    <portalil style="display: flex; gap: 50px; justify-content: center; margin-top: -25px;">
+        <p style="text-decoration: none; font-size: 3rem; color: rgb(156, 151, 151); font-weight: bolder;"><</p>
+        <p id="status" style="display: none; margin-top: 4rem; font-size: x-large;">Correct!</p>
+        <p id="next" style="text-decoration: none; font-size: 3rem; color: rgb(54, 53, 53); font-weight: bolder;">></p>
     </portalil>
+    <br>
+    <button onclick="compareFinal()">Done</button>
     <section id="main">
         <!-- mainares -->
-        <button onclick="compareFinal()">Done</button>
     </section>
 
     
@@ -314,25 +328,10 @@
                 status.classList.add('cl');
                }
             });
-
-
-            if(Pp.value + Ep.value + P2p.value === 'PEP'){
-                status.innerHTML = '';
-                status.innerHTML = 'Correct';
-                status.style.display = 'block';
-                status.style.color = 'limegreen';
-           }
-
-           if(Pp.value + Ep.value + P2p.value !== 'PEP'){
-            
-                status.innerHTML = '';
-                status.style.display = 'block';
-                status.innerHTML = 'Incorrect';
-                status.style.color = 'red';
-                status.classList.add('cl');
-             return;
-           }
         };
+
+        let next = document.getElementById('next');
+        next.addEventListener
     </script>
 </body>
 </html>
