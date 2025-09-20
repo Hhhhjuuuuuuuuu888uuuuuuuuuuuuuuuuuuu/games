@@ -95,7 +95,7 @@
         <p id="next" style="text-decoration: none; font-size: 3rem; color: rgb(54, 53, 53); font-weight: bolder;">></p>
     </portalil>
     <br>
-    <button onclick="compareFinal()">Done</button>
+    <button style="margin-top: -40rem;" onclick="compareFinal()">Done</button>
     <section id="main">
         <!-- mainares -->
     </section>
@@ -320,6 +320,11 @@
                 status.innerHTML = 'Correct';
                 status.style.display = 'block';
                 status.style.color = 'limegreen';
+
+                setInterval(() => {
+                    window.location.assign('next.html');
+                }, 2000);
+        
                }else{
                 status.innerHTML = '';
                 status.style.display = 'block';
@@ -329,9 +334,6 @@
                }
             });
         };
-
-        let next = document.getElementById('next');
-        next.addEventListener
     </script>
 </body>
 </html>
