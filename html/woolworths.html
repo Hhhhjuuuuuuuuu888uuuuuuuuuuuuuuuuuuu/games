@@ -344,6 +344,8 @@
                 status.innerHTML = 'Incorrect';
                 status.style.color = 'red';
                 status.classList.add('cl');
+                const utterance = new SpeechSynthesisUtterance(status.innerHTML);
+                speechSynthesis.speak(utterance);
                }
             });
         };
